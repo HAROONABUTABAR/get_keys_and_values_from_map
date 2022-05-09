@@ -8,25 +8,32 @@ void main() {
     "adders": "Jordan",
   };
 
-  getKey(user);
-  getValue(user);
-  getValueAndKey(user);
+  getKeys(user);
+  getValues(user);
+  getValuesAndKeys(user);
+  getKeysAndValuesUsingEntries(user);
 }
 
-void getKey(Map user) {
+void getKeys(Map user) {
   user.keys.forEach((key) {
     print("key: $key");
   });
 }
 
-void getValue(Map user) {
+void getValues(Map user) {
   user.values.forEach((value) {
     print("value: $value");
   });
 }
 
-void getValueAndKey(Map user) {
+void getValuesAndKeys(Map user) {
   user.forEach((key, value) {
     print("key: $key value: $value");
+  });
+}
+
+void getKeysAndValuesEntries(Map user) {
+  user.entries.forEach((entry) {
+    print('Key = ${entry.key} : Value = ${entry.value}');
   });
 }
